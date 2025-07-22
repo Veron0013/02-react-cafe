@@ -7,12 +7,6 @@ import { useState } from "react"
 import type { VoteType, Votes } from "../../types/votes"
 
 function App() {
-	//interface Votes {
-	//	good: number
-	//	neutral: number
-	//	bad: number
-	//}
-
 	const [count, setVotes] = useState<Votes>({
 		good: 0,
 		neutral: 0,
