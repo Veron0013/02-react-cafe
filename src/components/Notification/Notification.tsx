@@ -1,9 +1,5 @@
 import css from "./Notification.module.css"
 
-interface NotificationProps {
-	isOpen: boolean
-}
-
-export default function Notification({ isOpen }: NotificationProps) {
-	return isOpen && <p className={css.message}>No feedback yet</p>
+export default function Notification() {
+	return <p className={css.message}>No feedback yet</p>
 }

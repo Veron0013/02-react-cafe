@@ -36,8 +36,8 @@ function App() {
 		<div className={css.app}>
 			<CafeInfo />
 			<VoteOption onVote={handleVote} onReset={resetVotes} canReset={totalVotes > 0} />
-			<VoteStats votes={count} totalVotes={totalVotes} positiveRate={positiveRate} />
-			<Notification isOpen={totalVotes === 0} />
+			{totalVotes > 0 && <VoteStats votes={count} totalVotes={totalVotes} positiveRate={positiveRate} />}
+			{totalVotes === 0 && <Notification />}
 		</div>
 	)
 }
